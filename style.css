@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(242, 225, 255);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+    padding-top: 40px;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+}
+
+#pokediv {
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgb(231, 210, 250);
+    margin-top: 40px;
+}
+
+#cabeceraPokemon {
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 25px 50px;
+    background-color: rgb(231, 216, 241);
+}
+
+div {
+    align-self: center;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+
+table, th {
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

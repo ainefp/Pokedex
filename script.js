@@ -30,14 +30,14 @@ btn.addEventListener("click", () => {
         const stats = datos.stats;
         const cries = datos.cries.latest;
 
-        // no funciona actualmente
-        // en vez de añadirlo a la tabla, crear una segunda fila en la tabla
-        stats.forEach(stat => {
-            for (const th of tabla) {
-                th.textContent = stat.base_stat;
-            }
-            statsList.appendChild(statLi);
-        });
+        // // no funciona actualmente
+        // // en vez de añadirlo a la tabla, crear una segunda fila en la tabla
+        // stats.forEach(stat => {
+        //     for (const th of tabla) {
+        //         th.textContent = stat.base_stat;
+        //     }
+        //     statsList.appendChild(statLi);
+        // });
 
         nombre.textContent = name.toUpperCase();
         imgFront.src = front_default;

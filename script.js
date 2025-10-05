@@ -24,12 +24,7 @@ const cabeceraTabla = () => {
     });
 }
 
-
-btn.addEventListener("click", () => {
-    const pokemon = input.value.trim().toLowerCase();
-
-    limpiar();
-
+const asignarDat0s = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
         .then(response => response.json())
         .then(datos => {
@@ -44,7 +39,11 @@ btn.addEventListener("click", () => {
             // Crear la cabecera de la tabla
             cabeceraTabla();
 
-            // Agregar los stats a la tabla
+            // Asignación de datos al DOM
+            nombre.textContent = `${name.toUpperCase()}  #${id}`;
+            imgFront.src = front_default;
+            imgBack.src = back_default;
+            
             stats.forEach(stat => {
                 const th = document.createElement("th");
                 th.classList.add("stats");
@@ -52,20 +51,19 @@ btn.addEventListener("click", () => {
                 statsTable.appendChild(th);
             });
 
-            // Habilidades
             abilities.forEach(ability => {
                 const li = document.createElement("li");
                 li.textContent = ability.ability.name;
                 habilidades.appendChild(li);
             });
 
-            nombre.textContent = `${name.toUpperCase()}  #${id}`;
-            imgFront.src = front_default;
-            imgBack.src = back_default;
             sonido.src = cries;
 
         }).catch(error => console.log("Ha ocurrido un error tratando de obtener los datos: ", error));
+}
 
+btn.addEventListener("click", () => {
+    const pokemon = input.value.trim().toLowerCase();
+    limpiar();
+    asignarDat0s(pokemon);
 });
-
-// meter todo en una función y llamarla

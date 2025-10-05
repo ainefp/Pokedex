@@ -32,6 +32,7 @@
         border: none;
         border-radius: 15px;
         margin: 10px 10px;
+        margin-bottom: 30px;
         padding: 8px 8px;
         box-shadow: 0 1px 4px #21212133;
     }
@@ -77,6 +78,7 @@
             font-size: 1.1rem;
             color: #d32f2f;
             margin-bottom: 6px;
+            margin-top: 6px;
         }
 
     /* Buscador */
@@ -115,7 +117,7 @@
         }
 
     /* Imágenes */
-        #img {
+        .img {
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -132,7 +134,7 @@
         }
 
     /* Tabla Estadísticas */
-        #tabla {
+        .tabla {
             display: flex;
             align-items: center;
             justify-content: center;

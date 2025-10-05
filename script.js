@@ -11,8 +11,13 @@
     const habilidades = document.getElementById("habilidades");
 
 const limpiar = () => {
+    nombre.innerHTML = "";
+    imgFront.src = "";
+    imgBack.src = "";
+    statsHeader.innerHTML = "";
     statsTable.innerHTML = "";
     habilidades.innerHTML = "";
+    sonido.src = "";
 }
 
 const cabeceraTabla = () => {

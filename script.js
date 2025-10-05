@@ -1,25 +1,31 @@
-// elementos del DOM
-const input = document.getElementById("pokeInput");
-const btn = document.getElementById("buscarBtn");
-
-const nombre = document.getElementById("nombre");
-const nPokedex = document.getElementById("nPokedex");
-const statsTable = document.getElementById("stats");
-const sonido = document.getElementById("sonido");
-const imgFront = document.getElementById("img-front");
-const imgBack = document.getElementById("img-back");
-const habilidades = document.getElementById("habilidades");
-
-const div = document.getElementById("pokediv");
-    // div.style.display = "none";
+// Elementos del DOM
+    const input = document.getElementById("pokeInput");
+    const btn = document.getElementById("buscarBtn");
+    const nombre = document.getElementById("nombre");
+    const nPokedex = document.getElementById("nPokedex");
+    const statsHeader = document.getElementById("statsCabecera");
+    const statsTable = document.getElementById("stats");
+    const sonido = document.getElementById("sonido");
+    const imgFront = document.getElementById("img-front");
+    const imgBack = document.getElementById("img-back");
+    const habilidades = document.getElementById("habilidades");
 
 const limpiar = () => {
     statsTable.innerHTML = "";
     habilidades.innerHTML = "";
 }
 
+const cabeceraTabla = () => {
+    const headers = ["Vida", "Ataque", "Defensa", "Ataque especial", "Defensa especial", "Velocidad"];
+    headers.forEach(header => {
+        const th = document.createElement("th");
+        th.textContent = header;
+        statsHeader.appendChild(th);
+    });
+}
+
+
 btn.addEventListener("click", () => {
-    // Obtener el nombre del pokemon del input
     const pokemon = input.value.trim().toLowerCase();
 
     limpiar();
@@ -35,12 +41,13 @@ btn.addEventListener("click", () => {
             const abilities = datos.abilities;
             const cries = datos.cries.latest;
 
-            // no funciona actualmente
-            // en vez de añadirlo a la tabla, crear una segunda fila en la tabla
+            // Crear la cabecera de la tabla
+            cabeceraTabla();
 
-            // Recorrer los stats
+            // Agregar los stats a la tabla
             stats.forEach(stat => {
                 const th = document.createElement("th");
+                th.classList.add("stats");
                 th.textContent = stat.base_stat;
                 statsTable.appendChild(th);
             });
@@ -56,7 +63,9 @@ btn.addEventListener("click", () => {
             imgFront.src = front_default;
             imgBack.src = back_default;
             sonido.src = cries;
+
         }).catch(error => console.log("Ha ocurrido un error tratando de obtener los datos: ", error));
+
 });
 
 // meter todo en una función y llamarla

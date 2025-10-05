@@ -27,7 +27,7 @@
         box-shadow: 0 2px 12px #212121 inset;
     }
 
-    #pokeCabecera {
+    .pokeCabecera {
         background: #fff3e0;
         border: none;
         border-radius: 15px;
@@ -70,6 +70,9 @@
             letter-spacing: 2px;
         }
 
+        #nombre {
+            margin-top: 6px;
+        }
         h2 {
             font-size: 1.1rem;
             color: #d32f2f;
@@ -128,7 +131,32 @@
             border: 2px solid #0288d1;
         }
 
+    /* Tabla Estadísticas */
+        #tabla {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table {
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px #21212122;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        th {
+            color: #212121;
+            border: 1px solid #0288d1;
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-weight: 600;
+            text-align: center;
+        }
+
     /* Lista de habilidades */
         li {
             list-style: none;
+            color: #212121;
+            font-size: 1rem;
+            margin-bottom: 4px;
         }

@@ -1,4 +1,5 @@
 const nombre = document.getElementById("nombre");
+const nPokedex = document.getElementById("nPokedex");
 const statsList = document.getElementById("stats");
 const sonido = document.getElementById("sonido");
 const input = document.getElementById("pokeInput");
@@ -25,6 +26,7 @@ btn.addEventListener("click", () => {
     .then(response => response.json())
     .then(datos => {
         const name = datos.name;
+        const id = datos.id;
         const front_default = datos.sprites.front_default;
         const back_default = datos.sprites.back_default;
         const stats = datos.stats;
@@ -39,7 +41,7 @@ btn.addEventListener("click", () => {
         //     statsList.appendChild(statLi);
         // });
 
-        nombre.textContent = name.toUpperCase();
+        nombre.textContent = `${name.toUpperCase()}  #${id}`;
         imgFront.src = front_default;
         imgBack.src = back_default;
         sonido.src = cries;

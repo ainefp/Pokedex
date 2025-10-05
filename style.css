@@ -1,26 +1,47 @@
 body {
-    background-color: rgb(242, 225, 255);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: auto;
-    padding-top: 40px;
+    background: linear-gradient(135deg, #d32f2f 60%, #212121 100%);
+    font-family: 'Orbitron', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokedex {
     width: 50%;
-    align-self: center;
-    text-align: center;
+    border-radius: 30px;
+    background: #d32f2f;
+    box-shadow: 0 8px 32px black;
+    border: 6px solid black;
+    position: relative;
+    padding: 18px 12px 24px 12px;
 }
 
-#pokediv {
-    border: 2px solid black;
-    border-radius: 15px;
-    background-color: rgb(231, 210, 250);
-    margin-top: 40px;
-    margin-bottom: 20px;
+.pokeTitulo {
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bold;
 }
 
-#cabeceraPokemon {
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 25px 50px;
-    background-color: rgb(231, 216, 241);
+.pokeBuscador {
+    background: #b71c1c;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+#pokeCabecera {
+    border: none;
+    border-radius: 10px;
+    margin: 10px 10px;
+    background: #fff3e0;
+    padding: 8px 8px;
+}
+
+.pokeContenido {
+    background: linear-gradient(135deg, #e0f7fa 80%, #b2ebf2 100%);
+    border-radius: 12px;
+    padding: 18px 10px;
+    margin-bottom: 10px;
 }
 
 div {
@@ -31,18 +52,4 @@ div {
 
 li {
     list-style: none;
-}
-
-
-table, th {
-    border: 1px solid black;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-#tabla {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

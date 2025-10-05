@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +7,57 @@
     <title> Pokédex </title>
 </head>
 <body>
-    <h2> Pokédex </h2>
-    <input type="text" id="pokeInput" placeholder="Escribe el nombre del pokemon">
-    <button id="buscarBtn"> Buscar </button>
-    <div id="pokediv">
-        <div id="cabeceraPokemon">
-            <h1 id="nombre"></h1>
-            <div id="img">
-                <img id="img-front" src="" alt="front image"/>
-                <img id="img-back" src="" alt="back image" />
+    <div class="pokedex">
+        <div class="pokeTitulo"> Pokédex </div>
+        <div class="pokeBuscador">
+
+            <input type="text" id="pokeInput" placeholder="Escribe el nombre del pokemon">
+            <button id="buscarBtn"> Buscar </button>
+
+            <div class="pokeContenido">
+
+                <div id="pokeCabecera">
+                    <h1 id="nombre"></h1>
+                    <div id="img">
+                        <img id="img-front" src="" alt="front image"/>
+                        <img id="img-back" src="" alt="back image" />
+                    </div>
+                </div>
+
+                <div id="stats">
+                    <h2> Estadísticas: </h2>
+                    <div id="tabla">
+                        <table>
+                            <tr>
+                                <th> Vida </th>
+                                <th> Ataque </th>
+                                <th> Defensa </th>
+                                <th> Ataque especial </th>
+                                <th> Defensa especial </th>
+                                <th> Velocidad </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="habilidades">
+                    <h2>Habilidades</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div id="audio">
+                    <h2> Sonido </h2>
+                    <audio id="sonido" controls>
+                        <source src="" type="audio/ogg">
+                    </audio>
+                </div>
+
             </div>
-        </div>
-        <div id="stats">
-            <h2> Estadísticas: </h2>
-            <div id="tabla">
-                <table>
-                    <tr>
-                        <th> Vida </th>
-                        <th> Ataque </th>
-                        <th> Defensa </th>
-                        <th> Ataque especial </th>
-                        <th> Defensa especial </th>
-                        <th> Velocidad </th>
-                    </tr>
-                    <tr>
-                        <th>  </th>
-                        <th>  </th>
-                        <th>  </th>
-                        <th>  </th>
-                        <th>  </th>
-                        <th>  </th>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div id="habilidades">
-            <h2> Habilidades </h2>
-            <table>
-                <ul>
-                <li> Cuerpo maldito </li>
-            </ul>
-            </table>
-        </div>
-        <div id="audio">
-            <h2> Sonido </h2>
-            <audio id="sonido" controls>
-                <source src="./assets/audio/gengar.ogg" type="audio/ogg">
-            </audio>
         </div>
     </div>
 
